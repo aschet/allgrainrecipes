@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg5963"
+   version="1.1"
+   viewBox="0 0 7.9999413 8.0002947"
+   height="8.0002947mm"
+   width="7.9999413mm">
+  <defs
+     id="defs5957">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4513">
+      <path
+         d="M 0,0 H 595.276 V 841.89 H 0 Z"
+         id="path4511" />
+    </clipPath>
+  </defs>
+  <metadata
+     id="metadata5960">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-43.625029,-51.095095)"
+     id="layer1">
+    <g
+       transform="matrix(0.35277777,0,0,-0.35277777,-32.625028,155.36749)"
+       id="g4507">
+      <g
+         clip-path="url(#clipPath4513)"
+         id="g4509">
+        <g
+           transform="translate(238.8189,284.2363)"
+           id="g4515">
+          <path
+             id="path4517"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 0,0 c 0,-6.262 -5.076,-11.339 -11.339,-11.339 -6.262,0 -11.338,5.077 -11.338,11.339 0,6.262 5.076,11.339 11.338,11.339 C -5.076,11.339 0,6.262 0,0" />
+        </g>
+        <g
+           transform="translate(227.4802,278.5669)"
+           id="g4519">
+          <path
+             id="path4521"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="M 0,0 C 0,0 2.375,0.986 5.65,4.175 7.238,5.721 7.618,8.138 6.24,9.844 4.863,11.549 2.334,11.838 0.593,10.489 L 0,10.038 -0.593,10.489 C -2.334,11.838 -4.863,11.549 -6.24,9.844 -7.618,8.138 -7.238,5.721 -5.65,4.175 -2.374,0.986 0,0 0,0" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

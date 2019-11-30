@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg978"
+   version="1.1"
+   viewBox="0 0 7.9999413 8.0002947"
+   height="8.0002947mm"
+   width="7.9999413mm">
+  <defs
+     id="defs972">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4141">
+      <path
+         d="M 0,0 H 595.276 V 841.89 H 0 Z"
+         id="path4139" />
+    </clipPath>
+  </defs>
+  <metadata
+     id="metadata975">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-10.363122,-76.797469)"
+     id="layer1">
+    <g
+       transform="matrix(0.35277777,0,0,-0.35277777,-122.63692,147.56984)"
+       id="g4135">
+      <g
+         clip-path="url(#clipPath4141)"
+         id="g4137">
+        <g
+           transform="translate(399.685,189.2756)"
+           id="g4143">
+          <path
+             id="path4145"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 0,0 c 0,-6.262 -5.076,-11.339 -11.339,-11.339 -6.262,0 -11.338,5.077 -11.338,11.339 0,6.262 5.076,11.339 11.338,11.339 C -5.076,11.339 0,6.262 0,0" />
+        </g>
+        <g
+           transform="translate(390.3464,184.2607)"
+           id="g4147">
+          <path
+             id="path4149"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="M 0,0 V 1 H -4 V 0 h 1 v -1 h -0.98 c 0,-1.1 0.92,-1.97 2.01,-1.97 C -0.88,-2.97 0,-2.1 0,-1 H -1 V 0 Z M -0.05,2 C -0.05,4.97 3,5.08 3,8 3,10.91 0.91,13 -2.03,13 -4.97,13 -7,10.93 -7,8 -7,5.02 -4.01,4.97 -4.01,2 Z" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
