@@ -1,0 +1,181 @@
+\usepackage[american]{babel}
+\usepackage[pass]{geometry}
+\usepackage{fp}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{colortbl}\usepackage{graphicx}
+\usepackage{tabu}
+\usepackage{booktabs}
+\usepackage{mhchem}
+\usepackage{xifthen}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+\definecolor{softgray}{HTML}{F1F1F1}
+\definecolor{hardgray}{HTML}{6A6A6A}
+
+\setlength{\parindent}{0mm} 
+
+\setmainfont{Roboto Condensed}
+\setsansfont{Roboto Condensed}
+
+\newmdenv[linewidth=3pt,
+linecolor=black,
+backgroundcolor=softgray,
+fontcolor=hardgray,
+rightline=false,
+leftline=false,
+bottomline=false,
+skipabove=1.5mm]{recipieframe}
+
+\newenvironment{recipieblock}[1]
+{\uppercase{\textbf{#1}} \begin{recipieframe}}{\end{recipieframe}}
+
+\newenvironment{aboutblock}
+{\begin{recipieblock}{About This Beer}}{\end{recipieblock}}
+
+\newenvironment{ingredientsblock}
+{\begin{recipieblock}{Ingredients}}{\end{recipieblock}}
+
+\newcommand{\recipiesection}[2]{
+\begin{minipage}[t][1.6cm]{\textwidth}
+	\begin{minipage}[c][1.6cm][c]{1.2cm}
+		\includegraphics[width=1.0cm]{#1}
+	\end{minipage}
+	\begin{minipage}[c][1.6cm][c]{5cm}
+		\large{\textcolor{black}{\uppercase{\textbf{#2}}}}
+	\end{minipage}
+	\hfill
+\end{minipage}
+}
+
+\newcommand{\ftoc}[1]{\FPeval\amountg{round(((#1 - 32.0) / 1.8):0)}\FPprint\amountg ~°C}
+\newcommand{\tsptog}[1]{\FPeval\amountg{round((#1 * 4.92892):0)}\FPprint\amountg ~g}
+\newcommand{\oztog}[1]{\FPeval\amountg{round((#1 * 28.34952):0)}\FPprint\amountg ~g}
+\newcommand{\oztokg}[1]{\FPeval\amountg{round((#1 * 0.02834952):2)}\FPprint\amountg ~kg}
+\newcommand{\lbtokg}[1]{\FPeval\amountg{round((#1 * 0.4535924):2)}\FPprint\amountg ~kg}
+\newcommand{\galtol}[1]{\FPeval\amountg{round((#1 * 3.78541):1)}\FPprint\amountg ~l}
+\newcommand{\cuptoml}[1]{\FPeval\amountg{round((#1 * 240.0):0)}\FPprint\amountg ~ml}
+\newcommand{\tsptoml}[1]{\FPeval\amountg{round((#1 * 4.92892):0)}\FPprint\amountg ~ml}
+\newcommand{\srmtoebc}[1]{\FPeval\amountg{round((#1 * 1.97):0)}\FPprint\amountg}
+\newcommand{\sgtop}[1]{\FPeval\amountg{round((135.997 * pow(3,#1) - 630.272 * pow(2,#1) + 1111.14 * #1 - 616.868):1)}\FPprint\amountg ~°P}
+
+\newcommand{\specitem}[1]{\textcolor{black}{\uppercase{\textbf{#1}}}}
+
+\newenvironment{malts} {\recipiesection{images/malt.pdf}{Malt / Mash Additions}
+\begin{tabu} to \textwidth {Xr}
+\textbf{Name} & \textbf{Amount} \\ \midrule}{\end{tabu}}
+\newcommand{\malt}[2]{\small{#1} & \small{#2} \\ \midrule}
+
+\newenvironment{hops} {\recipiesection{images/hop.pdf}{Hops / Boil Additions}
+\begin{tabu} to \textwidth {Xcr}
+\textbf{Name} & \textbf{Addition} & \textbf{Amount} \\ \midrule}{\end{tabu}
+{\centering\small{FWP = first wort hopping, FO = flameout, WP = whirlpool, DHBT =
+biotransformation, DH = dry hopping} \par}}
+\newcommand{\hop}[4]{\small{#1} \ifthenelse{\isempty{#2}}{}{(#2)} & \small{\ifthenelse{\isempty{#3}}{--}{#3}} & \small{#4} \\ \midrule}
+
+\newenvironment{yeasts} {\recipiesection{images/yeast.pdf}{Yeast}
+\begin{tabu} to \textwidth {X}}{\end{tabu}}
+\newcommand{\yeast}[1]{\small{#1} \\ \midrule}
+
+\newenvironment{twists} {\recipiesection{images/star.pdf}{Fermentation Additons}
+\begin{tabu} to \textwidth {Xcr}
+\textbf{Name} & \textbf{Addition} & \textbf{Amount} \\ \midrule}{\end{tabu}}
+\newcommand{\twist}[3]{\small{#1} & \small{\ifthenelse{\isempty{#2}}{--}{#2}} & \small{#3} \\ \midrule}
+
+\newenvironment{mashsteps} {\recipiesection{images/mash.pdf}{Mash Schedule} 
+\begin{tabu} to \textwidth {Xr}}{\end{tabu}}
+\newcommand{\mashstep}[2]{\small{#1} & \small{#2} \\ \midrule}
+
+\newenvironment{fermentationsteps} {\recipiesection{images/ferment.pdf}{Fermentation} 
+\begin{tabu} to \textwidth {Xr}}{\end{tabu}}
+\newcommand{\fermentationstep}[2]{\small{#1} & \small{#2} \\ \midrule}
+
+\newenvironment{directions} {\recipiesection{images/bulp.pdf}{Directions}}{}
+
+\newenvironment{methodandtiming} {\begin{recipieblock}{Method / Timings}}{\end{recipieblock}}
+
+\newenvironment{yeastinfos}[1] {\begin{recipieblock}{#1} 
+\begin{tabu} to \textwidth {lX}}{\end{tabu}
+\end{recipieblock}}
+\newcommand{\yeastinfo}[2]{\small{#1} & \small{#2} \\ \midrule}
+
+\newcommand{\dryhbt}[2]{DHBT\ifthenelse{\isempty{#1}}{}{\textsubscript{#1}}\ifthenelse{\isempty{#2}}{}{ (#2)}}
+\newcommand{\dryh}[2]{DH\ifthenelse{\isempty{#1}}{}{\textsubscript{#1}}\ifthenelse{\isempty{#2}}{}{ (#2)}}
+\newcommand{\whirl}[2]{WP\ifthenelse{\isempty{#1}}{}{\textsubscript{#1}}\ifthenelse{\isempty{#2}}{}{ (#2)}}
+\newcommand{\fwh}{FWH}
+\newcommand{\foh}{FO}
+
+\newcommand{\hopamarillo}{Amarillo}
+\newcommand{\hopapollo}{Apollo}
+\newcommand{\hopbravo}{Bravo}
+\newcommand{\hopcascade}{Cascade}
+\newcommand{\hopcentennial}{Centennial}
+\newcommand{\hopchinook}{Chinook}
+\newcommand{\hopcitra}{Citra}
+\newcommand{\hopcolumbus}{Columbus}
+\newcommand{\hopeldorado}{El Dorado}
+\newcommand{\hopeureka}{Eureka}
+\newcommand{\hopfalconersflight}{Falconer's Flight}
+\newcommand{\hopfuggles}{Fuggles}
+\newcommand{\hopgalaxy}{Galaxy}
+\newcommand{\hopgoldings}{Goldings}
+\newcommand{\hophallertauertradition}{Hallertauer Tradition}
+\newcommand{\hophorizon}{Horizon}
+\newcommand{\hoplemondrop}{Lemondrop}
+\newcommand{\hopliberty}{Liberty}
+\newcommand{\hoplubelska}{Lubelska}
+\newcommand{\hopmagnum}{Magnum}
+\newcommand{\hopmarynka}{Marynka}
+\newcommand{\hopmosaic}{Mosaic}
+\newcommand{\hopmotueka}{Motueka}
+\newcommand{\hopnelsonsauvin}{Nelson Sauvin}
+\newcommand{\hopnugget}{Nugget}
+\newcommand{\hoppacifica}{Pacifica}
+\newcommand{\hoppacificgem}{Pacific Gem}
+\newcommand{\hoppacificjade}{Pacific Jade}
+\newcommand{\hopperle}{Perle}
+\newcommand{\hoprakau}{Rakau}
+\newcommand{\hopsantiam}{Santiam}
+\newcommand{\hopsimcoe}{Simcoe}
+\newcommand{\hopsterling}{Sterling}
+\newcommand{\hopsummit}{Summit}
+\newcommand{\hopvanguard}{Vanguard}
+\newcommand{\hopvicsecret}{Vic Secret}
+\newcommand{\hopwakatu}{Wakatu}
+\newcommand{\hopwarrior}{Warrior}
+\newcommand{\hopwillamette}{Willamette}
+\newcommand{\hopzythos}{Zythos}
+
+\newcommand{\styleamericanale}{American Ale}
+\newcommand{\styleamericanamberale}{American Amber Ale}
+\newcommand{\styleamericanbarleywine}{American Barleywine}
+\newcommand{\styleamericanipa}{American IPA}
+\newcommand{\styleamericanlager}{American Lager}
+\newcommand{\styleamericanpaleale}{American Pale Ale}
+\newcommand{\styleamericanstout}{American Stout}
+\newcommand{\styleamericanwheatorrye}{American Wheat or Rye}
+\newcommand{\stylebalticporter}{Baltic Porter}
+\newcommand{\styleaelgianandfrenchale}{Belgian and French Ale}
+\newcommand{\stylebelgiandarkstrongale}{Belgian Dark Strong Ale}
+\newcommand{\stylebelgiandubbel}{Belgian Dubbel}
+
+\newcommand{\specifications}[9]{
+\begin{recipieblock}{Specifications}
+\begin{tabu} to \textwidth {Xr}
+\specitem{Style} & #1 \\ \midrule
+\specitem{Volume} & #2 \\ \midrule
+\specitem{Original Gravity} & \ifthenelse{\isempty{#3}}{--}{\sgtop{#3} / #3} \\ \midrule
+\specitem{Final Gravity} & \ifthenelse{\isempty{#4}}{--}{\sgtop{#4} / #4} \\ \midrule
+\specitem{ABV} & \ifthenelse{\isempty{#5}}{--}{#5} \\ \midrule
+\specitem{IBU} & \ifthenelse{\isempty{#6}}{--}{#6} \\ \midrule
+\specitem{EBC} & \ifthenelse{\isempty{#7}}{--}{#7} \\ \midrule
+\specitem{Boil Time} & \ifthenelse{\isempty{#8}}{--}{#8} \\ \midrule
+\end{tabu}
+\end{recipieblock}
+}
+
+\newgeometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=3cm}
+
+\RedeclareSectionCommand[beforeskip=0mm,afterindent=false]{chapter}
