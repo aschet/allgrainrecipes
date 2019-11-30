@@ -1,0 +1,75 @@
+\documentclass[10pt,oneside]{scrbook}
+
+\include{setup}
+
+\begin{document}
+
+\mainmatter
+\twocolumn
+
+\part{Workbench}
+
+\chapter*{Bourbon Barrel Aged Full Eclipse II}
+
+\begin{aboutblock}
+A silver-medal-winning imperial stout recipe from the 2017 National Homebrew
+Competition courtesy of brewers Ryan Golden and Matt Warren of Signal Mountain, TN.
+With help from their club Barley Mob Brewers and BeerSmith, they've created a
+intricate and delicious recipe sure to warm any cold winter hands. 
+\end{aboutblock}
+
+\specifications{\stylerussianimperialstout}{\galtol{12}}{1.124}{1.030}{}{}{}{120~min}
+
+\begin{methodandtiming}
+ 
+\begin{mashsteps}
+\mashstep{\ftoc{153}}{60~min}
+\end{mashsteps}
+
+\begin{fermentationsteps}
+\fermentationstep{\ftoc{65}}{}
+\end{fermentationsteps}
+
+\begin{directions}
+When primary fermentation is complete, transfer to a bourbon barrel and age until
+the desired amount of oak and bourbon character is reached.
+\end{directions}
+
+\end{methodandtiming}
+
+\pagebreak
+
+\begin{ingredientsblock}
+
+\begin{malts}
+\malt{Rice Hulls}{\lbtokg{1}}
+\malt{Maris Otter}{\lbtokg{40}}
+\malt{Flaked Wheat}{\lbtokg{5}}
+\malt{Pale Chocolate Malt}{\lbtokg{4}}
+\malt{Chocolate Malt}{\lbtokg{3}}
+\malt{Roasted Barley}{\lbtokg{3}}
+\malt{Dingemans Special B}{\lbtokg{3}}
+\malt{Crystal 120 L}{\lbtokg{1}}
+\end{malts}
+
+\begin{hops}
+\hop{\hopmagnum}{12.3}{90~min}{\oztog{5.5}}
+\hop{\hopfuggles}{4.2}{20~min}{\oztog{2}}
+\hop{\hopstyriangoldings}{3.4}{20~min}{\oztog{2}}
+\hop{Whirlfloc Tablet}{}{5~min}{1}
+\hop{\hopfuggles}{4.2}{\whirl{}{15~min}}{\oztog{2}}
+\hop{\hopstyriangoldings}{3.4}{\whirl{}{15~min}}{\oztog{2}}
+
+\end{hops}
+
+\begin{yeasts}
+\yeast{Wyeast 1028}
+\end{yeasts}
+
+\end{ingredientsblock}
+
+\backmatter
+
+\include{appendix}
+
+\end{document}
