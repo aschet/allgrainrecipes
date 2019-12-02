@@ -9,32 +9,33 @@
 
 \part{Workbench}
 
-\begin{recipie}{Red Rock Brewing Black Bier}
+\begin{recipie}{Lovelace Vienna Lager}
 
 \begin{aboutblock}
-This beer recipe was taken from the book Session Beers: Brewing for Flavor and Balance by
-Jennifer Talley. This German-style dark lager from Red Rock Brewery is a classic schwarzbier
-that won a gold medal at the 2010 Great American Beer Festival. It's unusually dark color
-is gained from four different malts and very light hopping that make it a sessionable
-black lager.
+Robert Lovelace of Denver, NC, member of Fermentation Nation, won a gold medal in
+Category 4: Amber European Beer during the 2018 National Homebrew Competition Final
+Round in Portland, OR. Lovelace's Vienna lager was chosen as best among 273 entries
+in the category.
 \end{aboutblock}
 
-\specifications{\styleschwarzbier}{\galtol{5}}{1.040}{1.009}{4~\%}{28}{}{60~min}
+\specifications{\styleviennalager}{\galtol{6.5}}{1.052}{1.013}{5.2~\%}{31}{\srmtoebc{28}}{60~min}
 
 \begin{methodandtiming}
  
 \begin{mashsteps}
-\mashstep{\ftoc{148}}{}
+\mashstep{\ftoc{144}}{30~min}
+\mashstep{\ftoc{158}}{30~min}
+\mashstep{\ftoc{170}}{10~min}
 \end{mashsteps}
 
 \begin{fermentationsteps}
-\fermentationstep{\ftoc{48}}{}
+\fermentationstep{\ftoc{48}}{10~days}
+\fermentationstep{\ftoc{58}}{Raise to over 4~days}
 \end{fermentationsteps}
 
 \begin{directions}
-Adjust reverse osmosis water pH with lactic acid. No calcium needed.
-Age in the coldest place you have, \ftoc{33}--\ftoc{36} is optimal. Since it's
-only 4~\% ABV do not cool below \ftoc{33}. Carbonate to 2.5 volumes \ce{CO2}.
+Use low-mineral tap water. No sparge. Add lactic acid for 5.2 pH if needed. Lager and
+force carbonate at \ftoc{36} for 14~days until clear.
 \end{directions}
 
 \end{methodandtiming}
@@ -44,20 +45,22 @@ only 4~\% ABV do not cool below \ftoc{33}. Carbonate to 2.5 volumes \ce{CO2}.
 \begin{ingredientsblock}
 
 \begin{malts}
-\malt{Pilsner}{\lbtokg{7}}
-\malt{Munich}{\oztokg{12}}
-\malt{Dehusked Black}{\oztokg{5}}
-\malt{Roast}{\oztokg{1.5}}
+\malt{Weyermann Pilsner}{\lbtokg{6.5}}
+\malt{Weyermann Vienna}{\lbtokg{5}}
+\malt{Weyermann Munich II}{\lbtokg{1.5}}
+\malt{Briess Victory}{\oztokg{8}}
+\malt{Weyermann CARAAMBER}{\oztokg{8}}
+\malt{Briess Blackprinz}{\lbtokg{0.15}}
 \end{malts}
 
 \begin{hops}
-\hop{\hoptettnang}{4~\%}{60~min}{\oztog{0.75}}
-\hop{\hoptettnang}{4~\%}{30~min}{\oztog{0.75}}
-\hop{\hophallertauermittelfruh}{4~\%}{\whirl{}{}}{\oztog{1.5}}
+\hop{\hopmagnum}{14~\%}{60~min}{\oztog{0.63}}
+\hop{\hoptettnang}{3.5~\%}{\foh{}}{\oztog{1}}
+\hop{Whirlfloc Tablet}{}{\foh{}}{1}
 \end{hops}
 
 \begin{yeasts}
-\yeast{Wyeast 2124}
+\yeast{White Labs WLP830}
 \end{yeasts}
 
 \end{ingredientsblock}
