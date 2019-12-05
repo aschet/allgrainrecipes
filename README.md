@@ -7,3 +7,5 @@ Compile this book with a current TeX Live distribution with the following comman
 latexmk -lualatex --file-line-error --interaction=nonstopmode "All Grain Homebrew Beer Recipes.tex"
 ```
 ![](https://github.com/aschet/aharecipies/workflows/Build%20LaTeX%20document/badge.svg)
+
+Click [here](https://github.com/aschet/aharecipies/releases/latest/download/All.Grain.Homebrew.Beer.Recipes.pdf) to download the latest release.
