@@ -6,3 +6,4 @@ Compile this book with a current TeX Live distribution with the following comman
 ```sh
 latexmk -lualatex --file-line-error --interaction=nonstopmode "All Grain Homebrew Beer Recipes.tex"
 ```
+![](https://github.com/aschet/aharecipies/workflows/Build%20LaTeX%20document/badge.svg)
