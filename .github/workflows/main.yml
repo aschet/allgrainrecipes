@@ -18,3 +18,8 @@ jobs:
           files: All Grain Homebrew Beer Recipes.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: build
+          path: All Grain Homebrew Beer Recipes.pdf
