@@ -9,5 +9,5 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@master
         with:
-          root_file: AHA Beer Recipies.tex
+          root_file: All Grain Homebrew Beer Recipes.tex
           args: -lualatex --file-line-error --interaction=nonstopmode 
