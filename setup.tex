@@ -200,17 +200,18 @@ biotransformation, DH = dry hopping} \par}}
 
 \newcommand{\specifications}[9]{
 \begin{recipieblock}{Specifications}
+\small{
 \begin{tabu} to \textwidth {Xr}
 \specitem{Style} & #1 \\ \midrule
 \specitem{Volume} & #2 \\ \midrule
 \specitem{Original Gravity} & \ifthenelse{\isempty{#3}}{--}{\sgtop{#3} / #3} \\ \midrule
 \specitem{Final Gravity} & \ifthenelse{\isempty{#4}}{--}{\sgtop{#4} / #4} \\ \midrule
 \specitem{ABV} & \ifthenelse{\isempty{#5}}{--}{#5} \\ \midrule
-\specitem{IBU} & \ifthenelse{\isempty{#6}}{--}{#6} \\ \midrule
-\specitem{EBC} & \ifthenelse{\isempty{#7}}{--}{#7} \\ \midrule
+\specitem{Bitterness} & \ifthenelse{\isempty{#6}}{--}{#6 IBU} \\ \midrule
+\specitem{Color} & \ifthenelse{\isempty{#7}}{--}{#7 EBC} \\ \midrule
 \specitem{Boil Time} & \ifthenelse{\isempty{#8}}{--}{#8} \\ \midrule
 \specitem{Carbonation} & \ifthenelse{\isempty{#9}}{--}{#9 vol} \\ \midrule
-\end{tabu}
+\end{tabu}}
 \end{recipieblock}
 }
 
