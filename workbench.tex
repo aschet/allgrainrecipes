@@ -10,27 +10,36 @@
 \part{Workbench}
 
 % -----------------------------------------------------------------------------
-\begin{recipie}{Crow Peak Brewing Co. Pile 'O Dirt Porter}
+\begin{recipie}{Kilauea Punch American Amber Ale}
 % -----------------------------------------------------------------------------
 
 \begin{aboutblock}
-This beer was named Pile 'O Dirt because of the ridiculous amount of dirt Crow
-Peak Brewing had to build their original brewery on to get them out of the flood
-plain. This porter is very dark in color with a nice tan head and complexity
-due to the variety of specialty malts used.
+Derek Springer of San Marcos, CA, member of the Society of Barley Engineers,
+won a bronze medal in Category \#11: Amber \& Brown American Ale with an
+American Amber Ale during the 2019 National Homebrew Competition Final Round
+in Providence, RI. Springer's American Amber Ale was chosen as a top three
+entry among 281 entries in the category.
 \end{aboutblock}
 
-\specifications{\stylerobustporter}{\galtol{5.5}}{1.062}{1.015}{5.5~\%}{20}{\srmtoebc{35}}{60~min}{}
+\specifications{\styleamericanamberale}{\galtol{5.5}}{1.057}{1.015}{5.6~\%}{180.9}{\srmtoebc{14.7}}{~min}{}
 
 \begin{methodandtiming}
  
 \begin{mashsteps}
-\mashstep{\ftoc{156}}{60~min}
+\mashstep{\ftoc{153}}{60~min}
+\mashstep{\ftoc{168}}{10~min}
 \end{mashsteps}
 
 \begin{fermentationsteps}
-\fermentationstep{\ftoc{63}}{}
+\fermentationstep{\ftoc{65}}{1~day}
+\fermentationstep{\ftoc{68}}{6~day}
+\fermentationstep{\ftoc{32}}{1~day}
 \end{fermentationsteps}
+
+\begin{directions}
+After 4 days add dry hops. After fermentation add gelatin and a day after that
+keg and carbonate.
+\end{directions}
 
 \end{methodandtiming}
 
@@ -39,22 +48,26 @@ due to the variety of specialty malts used.
 \begin{ingredientsblock}
 
 \begin{malts}
-\malt{Briess Pale Ale}{\lbtokg{9}}
-\malt{Briess Bonlander Munich 10 L}{\lbtokg{1.5}}
-\malt{Briess Chocolate}{\lbtokg{0.5}}
-\malt{Briess Carapils}{\lbtokg{0.5}}
-\malt{Briess Extra Special}{\lbtokg{0.5}}
-\malt{Briess Blackprinz}{\lbtokg{0.5}}
+\malt{Brewer's Malt, 2-Row, Premium (Great Western)}{\lbtokg{4}}
+\malt{Maris Otter (Crisp) }{\lbtokg{4}}
+\malt{Munich II (Weyermann) }{\oztog{16}}
+\malt{Biscuit (Dingemans)  }{\oztog{8}}
+\malt{Crystal 120, 2-Row, (Great Western) }{\oztog{8}}
+\malt{Crystal 40, 2-Row, (Great Western)  }{\oztog{8}}
+\malt{Crystal 75, 2-Row, (Great Western) }{\oztog{8}}
 \end{malts}
 
 \begin{hops}
-\hop{\hopperle}{8.2~\%}{\fwh}{\oztog{0.5}}
-\hop{\hopwillamette}{4.5~\%}{10~min}{\oztog{0.3}}
-\hop{\hopwillamette}{4.5~\%}{\whirl{}{}}{\oztog{0.3}}
+\hop{\hopgalaxy}{18.1~\%}{15~min}{\oztog{1}}
+\hop{\hopcentennial}{10.4~\%}{5~min}{\oztog{1}}
+\hop{\hopmotueka}{7.3~\%}{5~min}{\oztog{1}}
+\hop{\hopcentennial}{10.4~\%}{\dryh{}{3~days}}{\oztog{1}}
+\hop{\hopgalaxy}{18.1~\%}{\dryh{}{3~days}}{\oztog{1}}
+\hop{\hopmotueka}{7.3~\%}{\dryh{}{3~days}}{\oztog{1}}
 \end{hops}
 
 \begin{yeasts}
-\yeast{White Labs WLP041}
+\yeast{White Labs WLP090}
 \end{yeasts}
 
 \end{ingredientsblock}
