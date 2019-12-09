@@ -4,7 +4,8 @@
 \usepackage{fontspec}
 \usepackage{xcolor}
 \usepackage{mdframed}
-\usepackage{colortbl}\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{graphicx}
 \usepackage{tabu}
 \usepackage{booktabs}
 \usepackage{mhchem}
@@ -86,6 +87,12 @@ biotransformation, DH = dry hopping} \par}}
 \newenvironment{yeasts} {\recipiesection{images/yeast.pdf}{Yeast}
 \begin{tabu} to \textwidth {X}}{\end{tabu}}
 \newcommand{\yeast}[1]{#1 \\ \midrule}
+
+\newcommand{\singleyeast}[1]{
+\begin{yeasts}
+\yeast{#1}
+\end{yeasts}
+}
 
 \newenvironment{twists} {\recipiesection{images/star.pdf}{Fermentation Additons}
 \begin{tabu} to \textwidth {Xcr}
@@ -215,6 +222,10 @@ biotransformation, DH = dry hopping} \par}}
 \newcommand{\styleviennalager}{Vienna Lager}
 \newcommand{\styleweizenweissbier}{Weizen / Weissbier}
 \newcommand{\stylewitbier}{Witbier}
+
+\newcommand{\sourceaha}{Source: Aermican Homebrewers Association.}
+\newcommand{\sourcezymurgy}[1]{Source: Zymurgy #1.}
+\newcommand{\waterprofile}[6]{\ce{Ca} #1~ppm, \ce{Mg} #2~ppm, \ce{SO4} #3~ppm, \ce{Na} #4~ppm, \ce{Cl} #5~ppm, \ce{HCO3} #6~ppm}
 
 \newcommand{\specifications}[9]{
 \begin{recipieblock}{Specifications}
