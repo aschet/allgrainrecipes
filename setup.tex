@@ -82,6 +82,11 @@ skipabove=1.5mm]{recipieframe}
 biotransformation, DH = dry hopping} \par}}
 \newcommand{\hop}[4]{#1 \ifthenelse{\isempty{#2}}{}{(#2)} & \ifthenelse{\isempty{#3}}{--}{#3} & #4 \\ \midrule}
 
+\newenvironment{yeastsx} {\recipiesection{images/yeast.pdf}{Yeast}
+\begin{tabu} to \textwidth {Xr}
+\textbf{Name} & \textbf{Addition} \\ \midrule}{\end{tabu}}
+\newcommand{\yeastx}[2]{#1 & #2 \\ \midrule}
+
 \newenvironment{yeasts} {\recipiesection{images/yeast.pdf}{Yeast}
 \begin{tabu} to \textwidth {X}}{\end{tabu}}
 \newcommand{\yeast}[1]{#1 \\ \midrule}
