@@ -105,6 +105,10 @@ biotransformation, DH = dry hopping} \par}}
 \newenvironment{mashsteps} {\recipiesection{images/mash.pdf}{Mash}
 \begin{tabu} to \textwidth {Xr}}{\end{tabu}}
 \newcommand{\mashstep}[2]{#1 & #2 \\ \midrule}
+\newcommand{\mashdecoctthin}[1]{\mashstep{}{Thin decoction #1}}
+\newcommand{\mashdecoctthick}[1]{\mashstep{}{Thick decoction #1}}
+\newcommand{\mashdecoctboil}[1]{\mashstep{\ftoc{212}}{Boil #1}}
+\newcommand{\mashdecoctreturn}[2]{\mashstep{#1}{Return to main mash\ifthenelse{\isempty{#2}}{}{; #2}}}
 
 \newenvironment{fermentationsteps} {\recipiesection{images/ferment.pdf}{Fermentation} 
 \begin{tabu} to \textwidth {Xr}}{\end{tabu}}
@@ -198,6 +202,7 @@ biotransformation, DH = dry hopping} \par}}
 \newcommand{\stylebelgiandubbel}{Belgian Dubbel}
 \newcommand{\stylebelgiangoldenstrongale}{Belgian Golden Strong Ale}
 \newcommand{\stylebelgianpaleale}{Belgian Pale Ale}
+\newcommand{\stylebohemianpilsner}{Bohemian Pilsner}
 \newcommand{\stylecreamale}{Cream Ale}
 \newcommand{\styledopplebock}{Dopplebock}
 \newcommand{\styleenglishbarleywine}{English Barleywine}
@@ -215,6 +220,7 @@ biotransformation, DH = dry hopping} \par}}
 \newcommand{\stylemunichhelles}{Munich Helles}
 \newcommand{\styleoatmealstout}{Oatmeal Stout}
 \newcommand{\styleoktoberfest}{Oktoberfest / Märzen}
+\newcommand{\stylepilsner}{Pilsner}
 \newcommand{\stylerobustporter}{Robust Porter}
 \newcommand{\stylerussianimperialstout}{Russian Imperial Stout}
 \newcommand{\stylesaison}{Saison}
