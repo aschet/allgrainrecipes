@@ -10,36 +10,31 @@
 \part{Workbench}
 
 % -----------------------------------------------------------------------------
-\begin{recipie}{Church Brew Works Pious Monk Dunkel}
+\begin{recipie}{Veteran's Day IPA}
 % -----------------------------------------------------------------------------
 
 \begin{aboutblock}
-This dark-style lager from the Church Brew Works won a Great American Beer
-Festival 2012 silver medal and is based on a 150-year-old recipe from Munich,
-Germany. This version is slightly darker and surprisingly easy drinking with
-a low ABV and crisp finish. \sourceaha
+Stephen Cheng of Burke, VA, won a silver medal in Category \#16: American IPA
+during the 2019 National Homebrew Competition Final Round in Providence, RI.
+Cheng's American IPA was chosen as the runner-up entry among 353 entries in the
+category. \sourceaha
 \end{aboutblock}
 
-\specifications{\stylemunichdunkel}{\galtol{5}}{1.054}{1.012}{5.5~\%}{26}{\srmtoebc{16.5}}{90~min}{}
+\specifications{\styleamericanipa}{\galtol{5}}{1.053}{1.012}{5.46~\%}{81}{}{60~min}{2.25}
 
 \begin{methodandtiming}
  
 \begin{mashsteps}
-\mashstep{\ftoc{140}}{Start}
-\mashdecoctthick{}
-\mashdecoctboil{}
-\mashdecoctreturn{\ftoc{154}}{}
-
+\mashstep{\ftoc{150}}{60~min}
 \end{mashsteps}
 
 \begin{fermentationsteps}
-\fermentationstep{\ftoc{50}}{Pitch}
-\fermentationstep{\ftoc{52}}{Free raise to}
-\fermentationstep{\ftoc{35}}{After diacetyl rest reduce to by 2.5~°C/day}
+\fermentationstep{\ftoc{70}}{}
 \end{fermentationsteps}
 
 \begin{directions}
-Lager at \ftoc{35} for 3 weeks.
+On day 7, add dry hops. After two days cold crash, fine with gelatin, cold crash 2
+more days.
 \end{directions}
 
 \end{methodandtiming}
@@ -49,20 +44,22 @@ Lager at \ftoc{35} for 3 weeks.
 \begin{ingredientsblock}
 
 \begin{malts}
-\malt{Pilsner}{\lbtokg{4.16}}
-\malt{Munich}{\lbtokg{4.16}}
-\malt{Weyermann Melanoidin}{\oztog{12}}
-\malt{Weyermann CARAFOAM}{\oztog{10}}
-\malt{Weyermann CARAAROMA}{\oztog{6}}
-\malt{Weyermann CARAFA II}{\oztog{3}}
+\malt{Two-row}{\lbtokg{7.33}}
+\malt{Munich}{\lbtokg{3.33}}
+\malt{Carapils / Dextrin}{\lbtokg{1}}
+\malt{Caramel / Crystal 20 L}{\lbtokg{1}}
 \end{malts}
 
 \begin{hops}
-\hop{\hopperle}{8.1~\%}{90~min}{\oztog{0.7}}
-\hop{\hoptettnang}{4.7~\%}{20~min}{\oztog{0.7}}
+\hop{\hopbravo}{15~\%}{60~min}{\oztog{0.33}}
+\hop{\hopcitra}{11~\%}{20~min}{\oztog{0.75}}
+\hop{\hopcitra}{11~\%}{15~min}{\oztog{1.75}}
+\hop{\hopcitra}{11~\%}{5~min}{\oztog{2.5}}
+\hop{\hopcitra}{11~\%}{\foh{}{}}{\oztog{1.75}}
+\hop{\hopcitra ~Cryo}{25~\%}{\dryh{}{2~days}}{\oztog{2}}
 \end{hops}
 
-\singleyeast{Augustiner Lager}
+\singleyeast{Imperial Yeast A24}
 
 \begin{twists}
 \twist{Yeast Nutrient}{Primary}{\tsptog{2}}
