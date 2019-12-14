@@ -37,7 +37,7 @@ skipabove=1.5mm]{recipeframe}
 
 \newenvironment{recipe}[1]{\begin{multicols}{2}[\section*{#1}]}{\end{multicols} \newpage}
 
-\newcommand{\recipebreak}{\columnbreak}
+\newcommand{\recipebreak}{\vfill\null \columnbreak}
 
 \newenvironment{recipeblock}[1]
 {\uppercase{\textbf{#1}} \begin{recipeframe}}{\end{recipeframe}}
