@@ -1,3 +1,4 @@
+\usepackage[utf8]{inputenc}
 \usepackage[american]{babel}
 \usepackage[pass]{geometry}
 \usepackage[regular,condensed,sfdefault]{roboto}
@@ -28,6 +29,7 @@ leftline=false,
 bottomline=false,
 skipabove=1.5mm]{recipieframe}
 
+\newcommand{\stylecategory}[1]{}
 \newcommand{\stylesection}[1]{\part{#1}}
 
 \newenvironment{recipie}[1]{\chapter*{#1}}{}
@@ -189,53 +191,87 @@ biotransformation, DH = dry hopping} \par}}
 \newcommand{\hopzythos}{Zythos}
 
 \newcommand{\styleamericanale}{American Ale}
-\newcommand{\styleamericanamberale}{American Amber Ale}
-\newcommand{\styleamericanbarleywine}{American Barleywine}
-\newcommand{\styleamericanipa}{American IPA}
-\newcommand{\styleamericanlager}{American Lager}
-\newcommand{\styleamericanpaleale}{American Pale Ale}
-\newcommand{\styleamericanstout}{American Stout}
 \newcommand{\styleamericanwheatorrye}{American Wheat / Rye}
-\newcommand{\stylebalticporter}{Baltic Porter}
-\newcommand{\stylebelgianandfrenchale}{Belgian / French Ale}
-\newcommand{\stylebelgianblondale}{Belgian Blond Ale}
-\newcommand{\stylebelgiandarkstrongale}{Belgian Dark Strong Ale}
-\newcommand{\stylebelgiandubbel}{Belgian Dubbel}
-\newcommand{\stylebelgiangoldenstrongale}{Belgian Golden Strong Ale}
-\newcommand{\stylebelgianpaleale}{Belgian Pale Ale}
-\newcommand{\styleblondale}{Blonde Ale}
+
 \newcommand{\stylebohemianpilsner}{Bohemian Pilsner}
-\newcommand{\stylebrownporter}{Brown Porter}
-\newcommand{\stylecreamale}{Cream Ale}
-\newcommand{\styledopplebock}{Dopplebock}
 \newcommand{\styleenglishbarleywine}{English Barleywine}
-\newcommand{\styleenglishporter}{English Porter}
 \newcommand{\styleeuropeanamberlager}{European Amber Lager}
 \newcommand{\styleextraspecialstrongbitter}{Extra Special / Strong Bitter}
 \newcommand{\stylefruitbeer}{Fruit Beer}
 \newcommand{\stylegermanpilsner}{German Pilsner (Pils)}
 \newcommand{\stylegermanwheatandryebeer}{German Wheat / Rye Beer}
-\newcommand{\styleimperialstout}{Imperial Stout}
 \newcommand{\styleindiapaleale}{India Pale Ale}
-\newcommand{\styleirishredale}{Irish Red Ale}
-\newcommand{\stylemaibock}{Maibock / Helles Bock}
-\newcommand{\stylemild}{Mild}
 \newcommand{\stylemunichdunkel}{Munich Dunkel}
 \newcommand{\stylemunichhelles}{Munich Helles}
-\newcommand{\styleoatmealstout}{Oatmeal Stout}
-\newcommand{\styleoktoberfest}{Oktoberfest / Märzen}
 \newcommand{\stylepilsner}{Pilsner}
-\newcommand{\stylerobustporter}{Robust Porter}
-\newcommand{\stylerussianimperialstout}{Russian Imperial Stout}
-\newcommand{\stylesaison}{Saison}
-\newcommand{\styleschwarzbier}{Schwarzbier}
-\newcommand{\stylescottishlight}{Scottish Light 60/-}
 \newcommand{\stylespecialtybeer}{Specialty Beer}
 \newcommand{\stylestandardordinarybitter}{Standard / Ordinary Bitter}
-\newcommand{\stylesweetstout}{Sweet Stout}
+
+
+% Light Lager
+\newcommand{\styleamericanlager}{American Lager}
+\newcommand{\stylefestbier}{Festbier}
+
+% European Amber Lager
 \newcommand{\styleviennalager}{Vienna Lager}
-\newcommand{\styleweizenweissbier}{Weizen / Weissbier}
+
+% Bock
+\newcommand{\stylehellesbock}{Helles Bock}
+\newcommand{\styledopplebock}{Dopplebock}
+
+% Dark Lager
+\newcommand{\styleschwarzbier}{Schwarzbier}
+
+% Light Hybrid Beer
+\newcommand{\stylecreamale}{Cream Ale}
+\newcommand{\styleblondeale}{Blonde Ale}
+
+% Scottish & Irish Ale
+\newcommand{\stylescottishlight}{Scottish Light}
+\newcommand{\styleirishredale}{Irish Red Ale}
+
+% American Pale Ale
+\newcommand{\styleamericanpaleale}{American Pale Ale}
+
+% Other American Ale
+\newcommand{\styleamericanamberale}{American Amber Ale}
+
+% English Brown Ale
+\newcommand{\styledarkmild}{Dark Mild}
+
+% Porter
+\newcommand{\styleenglishporter}{English Porter}
+\newcommand{\styleamericanporter}{American Porter}
+\newcommand{\stylebalticporter}{Baltic Porter}
+
+% Stout
+\newcommand{\styleoatmealstout}{Oatmeal Stout}
+\newcommand{\stylesweetstout}{Sweet Stout}
+
+% Strong Stout
+\newcommand{\styleamericanstout}{American Stout}
+\newcommand{\styleimperialstout}{Imperial Stout}
+
+% American IPA
+\newcommand{\styleamericanipa}{American IPA}
+
+% German Wheat Rye Beer
+\newcommand{\styleweissbier}{Weissbier}
+
+% Belgian & French Al
+\newcommand{\stylebelgianandfrenchale}{Belgian \& French Ale} % TODO: check style
 \newcommand{\stylewitbier}{Witbier}
+\newcommand{\stylebelgianpaleale}{Belgian Pale Ale}
+\newcommand{\stylesaison}{Saison}
+
+% Belgian Strong Ale
+\newcommand{\stylebelgianblondale}{Belgian Blond Ale}
+\newcommand{\stylebelgiandubbel}{Belgian Dubbel}
+\newcommand{\stylebelgiangoldenstrongale}{Belgian Golden Strong Ale}
+\newcommand{\stylebelgiandarkstrongale}{Belgian Dark Strong Ale}
+
+% Strong Ale
+\newcommand{\styleamericanbarleywine}{American Barleywine}
 
 \newcommand{\sourceaha}{Source: Aermican Homebrewers Association.}
 \newcommand{\sourcezymurgy}[1]{Source: Zymurgy #1.}
