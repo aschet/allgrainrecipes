@@ -1,3 +1,4 @@
+\usepackage{scrlayer-scrpage}
 \usepackage[utf8]{inputenc}
 \usepackage[american]{babel}
 \usepackage[pass]{geometry}
@@ -13,12 +14,14 @@
 \usepackage[version=4]{mhchem}
 \usepackage{xifthen}
 \usepackage[hidelinks,pdfencoding=auto]{hyperref}
+\usepackage{multicol}
 \usepackage{microtype}
 
 \definecolor{softgray}{HTML}{F1F1F1}
 \definecolor{hardgray}{HTML}{6A6A6A}
-
+\chead{}
 \setlength{\parindent}{0mm} 
+\RedeclareSectionCommand[tocnumwidth=0.85cm]{part}
 
 \newmdenv[linewidth=3pt,
 linecolor=black,
@@ -27,23 +30,25 @@ fontcolor=hardgray,
 rightline=false,
 leftline=false,
 bottomline=false,
-skipabove=1.5mm]{recipieframe}
+skipabove=1.5mm]{recipeframe}
 
-\newcommand{\stylecategory}[1]{}
-\newcommand{\stylesection}[1]{\part{#1}}
+\newcommand{\stylecategory}[1]{\part{#1}}
+\newcommand{\stylesection}[1]{\chapter{#1} \clearpage}
 
-\newenvironment{recipie}[1]{\chapter*{#1}}{}
+\newenvironment{recipe}[1]{\begin{multicols}{2}[\section*{#1}]}{\end{multicols} \newpage}
 
-\newenvironment{recipieblock}[1]
-{\uppercase{\textbf{#1}} \begin{recipieframe}}{\end{recipieframe}}
+\newcommand{\recipebreak}{\columnbreak}
+
+\newenvironment{recipeblock}[1]
+{\uppercase{\textbf{#1}} \begin{recipeframe}}{\end{recipeframe}}
 
 \newenvironment{aboutblock}
-{\begin{recipieblock}{About This Beer}}{\end{recipieblock}}
+{\begin{recipeblock}{About This Beer}}{\end{recipeblock}}
 
 \newenvironment{ingredientsblock}
-{\begin{recipieblock}{Ingredients}}{\end{recipieblock}}
+{\begin{recipeblock}{Ingredients}}{\end{recipeblock}}
 
-\newcommand{\recipiesection}[2]{
+\newcommand{\recipesection}[2]{
 \begin{minipage}[t][1.2cm]{\textwidth}
 	\begin{minipage}[c][1.2cm][c]{0.95cm}
 		\includegraphics[width=0.8cm]{#1}
@@ -73,24 +78,24 @@ skipabove=1.5mm]{recipieframe}
 
 \newcommand{\specitem}[1]{\textcolor{black}{\uppercase{\textbf{#1}}}}
 
-\newenvironment{malts} {\recipiesection{images/malt.pdf}{Malt / Mash Additions}
+\newenvironment{malts} {\recipesection{images/malt.pdf}{Malt / Mash Additions}
 \begin{tabu} to \textwidth {Xr}
 \textbf{Name} & \textbf{Amount} \\ \midrule}{\end{tabu}}
 \newcommand{\malt}[2]{#1 & #2 \\ \midrule}
 
-\newenvironment{hops} {\recipiesection{images/hop.pdf}{Hops / Boil Additions}
+\newenvironment{hops} {\recipesection{images/hop.pdf}{Hops / Boil Additions}
 \begin{tabu} to \textwidth {Xcr}
 \textbf{Name} & \textbf{Addition} & \textbf{Amount} \\ \midrule}{\end{tabu}
 {\centering\small{FWP = first wort hopping, FO = flameout, WP = whirlpool, DHBT =
 biotransformation, DH = dry hopping} \par}}
 \newcommand{\hop}[4]{#1 \ifthenelse{\isempty{#2}}{}{(#2)} & \ifthenelse{\isempty{#3}}{--}{#3} & #4 \\ \midrule}
 
-\newenvironment{yeastsx} {\recipiesection{images/yeast.pdf}{Yeast}
+\newenvironment{yeastsx} {\recipesection{images/yeast.pdf}{Yeast}
 \begin{tabu} to \textwidth {Xr}
 \textbf{Name} & \textbf{Addition} \\ \midrule}{\end{tabu}}
 \newcommand{\yeastx}[2]{#1 & #2 \\ \midrule}
 
-\newenvironment{yeasts} {\recipiesection{images/yeast.pdf}{Yeast}
+\newenvironment{yeasts} {\recipesection{images/yeast.pdf}{Yeast}
 \begin{tabu} to \textwidth {X}}{\end{tabu}}
 \newcommand{\yeast}[1]{#1 \\ \midrule}
 
@@ -100,12 +105,12 @@ biotransformation, DH = dry hopping} \par}}
 \end{yeasts}
 }
 
-\newenvironment{twists} {\recipiesection{images/star.pdf}{Fermentation Additons}
+\newenvironment{twists} {\recipesection{images/star.pdf}{Fermentation Additons}
 \begin{tabu} to \textwidth {Xcr}
 \textbf{Name} & \textbf{Addition} & \textbf{Amount} \\ \midrule}{\end{tabu}}
 \newcommand{\twist}[3]{#1 & \ifthenelse{\isempty{#2}}{--}{#2} & #3 \\ \midrule}
 
-\newenvironment{mashsteps} {\recipiesection{images/mash.pdf}{Mash}
+\newenvironment{mashsteps} {\recipesection{images/mash.pdf}{Mash}
 \begin{tabu} to \textwidth {Xr}}{\end{tabu}}
 \newcommand{\mashstep}[2]{#1 & #2 \\ \midrule}
 \newcommand{\mashdecoctthin}[1]{\mashstep{}{Thin decoction #1}}
@@ -113,17 +118,17 @@ biotransformation, DH = dry hopping} \par}}
 \newcommand{\mashdecoctboil}[1]{\mashstep{\ftoc{212}}{Boil #1}}
 \newcommand{\mashdecoctreturn}[2]{\mashstep{#1}{Return to main mash\ifthenelse{\isempty{#2}}{}{; #2}}}
 
-\newenvironment{fermentationsteps} {\recipiesection{images/ferment.pdf}{Fermentation} 
+\newenvironment{fermentationsteps} {\recipesection{images/ferment.pdf}{Fermentation} 
 \begin{tabu} to \textwidth {Xr}}{\end{tabu}}
 \newcommand{\fermentationstep}[2]{#1 & #2 \\ \midrule}
 
-\newenvironment{directions} {\recipiesection{images/bulp.pdf}{Directions}}{}
+\newenvironment{directions} {\recipesection{images/bulp.pdf}{Directions}}{}
 
-\newenvironment{methodandtiming} {\begin{recipieblock}{Method / Timings}}{\end{recipieblock}}
+\newenvironment{methodandtiming} {\begin{recipeblock}{Method / Timings}}{\end{recipeblock}}
 
-\newenvironment{yeastinfos}[1] {\begin{recipieblock}{#1} 
+\newenvironment{yeastinfos}[1] {\begin{recipeblock}{#1} 
 \begin{tabu} to \textwidth {lX}}{\end{tabu}
-\end{recipieblock}}
+\end{recipeblock}}
 \newcommand{\yeastinfo}[2]{#1 & #2 \\ \midrule}
 
 \newcommand{\dryhbt}[2]{DHBT\ifthenelse{\isempty{#1}}{}{\textsubscript{#1}}\ifthenelse{\isempty{#2}}{}{ (#2)}}
@@ -284,7 +289,7 @@ biotransformation, DH = dry hopping} \par}}
 \newcommand{\waterprofile}[6]{\ce{Ca} #1~ppm, \ce{Mg} #2~ppm, \ce{SO4} #3~ppm, \ce{Na} #4~ppm, \ce{Cl} #5~ppm, \ce{HCO3} #6~ppm}
 
 \newcommand{\specifications}[9]{
-\begin{recipieblock}{Specifications}
+\begin{recipeblock}{Specifications}
 \begin{tabu} to \textwidth {Xr}
 \specitem{Style} & #1 \\ \midrule
 \specitem{Volume} & #2 \\ \midrule
@@ -296,11 +301,10 @@ biotransformation, DH = dry hopping} \par}}
 \specitem{Boil Time} & \ifthenelse{\isempty{#8}}{--}{#8} \\ \midrule
 \specitem{Carbonation} & \ifthenelse{\isempty{#9}}{--}{#9~vol} \\ \midrule
 \end{tabu}
-\end{recipieblock}
+\end{recipeblock}
 }
 
 \newgeometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=3cm}
 
-\RedeclareSectionCommand[tocnumwidth=1.5cm]{part}
 \RedeclareSectionCommand[beforeskip=0mm,afterindent=false]{chapter}
 \renewcommand*{\partpagestyle}{empty} 
