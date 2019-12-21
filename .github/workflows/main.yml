@@ -9,17 +9,17 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@master
         with:
-          root_file: All Grain Homebrew Beer Recipes.tex
+          root_file: allgrainbeerrecipes.tex
           args: -pdf --file-line-error --interaction=nonstopmode 
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: All Grain Homebrew Beer Recipes.pdf
+          files: allgrainbeerrecipes.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
           name: build
-          path: All Grain Homebrew Beer Recipes.pdf
+          path: allgrainbeerrecipes.pdf
