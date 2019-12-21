@@ -43,7 +43,7 @@ skipbelow=1.5mm]{recipeframe}
 \newcommand{\stylecategory}[1]{\part{#1}}
 \newcommand{\stylesection}[1]{\chapter{#1} \clearpage}
 
-\newenvironment{recipe}[1]{\begin{multicols}{2}[\section*{#1}] \index{#1}}{\end{multicols} \newpage}
+\newenvironment{recipe}[2][]{\begin{multicols}{2}[\section*{#2}]\ifthenelse{\equal{#1}{}}{\index{#2}}{\index{#1@#2}}}{\end{multicols} \newpage}
 
 \newcommand{\recipebreak}{\vfill\null \columnbreak}
 
