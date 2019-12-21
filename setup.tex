@@ -15,6 +15,7 @@
 \usepackage{xifthen}
 \usepackage[hidelinks,pdfencoding=auto]{hyperref}
 \usepackage{multicol}
+\usepackage{imakeidx}
 \usepackage{microtype}
 
 %\KOMAoptions{toc=flat,toc=listof}
@@ -42,7 +43,7 @@ skipbelow=1.5mm]{recipeframe}
 \newcommand{\stylecategory}[1]{\part{#1}}
 \newcommand{\stylesection}[1]{\chapter{#1} \clearpage}
 
-\newenvironment{recipe}[1]{\begin{multicols}{2}[\section*{#1}]}{\end{multicols} \newpage}
+\newenvironment{recipe}[1]{\begin{multicols}{2}[\section*{#1}] \index{#1}}{\end{multicols} \newpage}
 
 \newcommand{\recipebreak}{\vfill\null \columnbreak}
 

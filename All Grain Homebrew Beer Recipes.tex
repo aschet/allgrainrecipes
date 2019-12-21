@@ -1,6 +1,7 @@
 \documentclass[fontsize=9pt,oneside,toc=chapterentrydotfill]{scrbook}
 
 \include{setup}
+\makeindex[columns=2, title=Recipe Index, options= -s recipeindex.ist]
 
 \begin{document}
 
@@ -146,8 +147,9 @@
 \stylecategory{Specialty Beer}
 \include{alternativesugarbeer}
 
-\backmatter
-
 \include{appendix}
+
+\backmatter
+\printindex
 
 \end{document}
