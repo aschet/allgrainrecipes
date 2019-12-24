@@ -82,7 +82,7 @@ skipbelow=1.5mm]{recipeframe}
 \newcommand{\tsptoml}[1]{\FPeval\amountg{round((#1 * 4.92892):0)}\FPprint\amountg ~ml}
 \newcommand{\srmtoebc}[1]{\FPeval\amountg{round((#1 * 1.97):0)}\FPprint\amountg ~EBC}
 \newcommand{\sgtop}[1]{\FPeval\amountg{round((135.997 * pow(3,#1) - 630.272 * pow(2,#1) + 1111.14 * #1 - 616.868):1)}\FPprint\amountg ~°P}
-\newcommand{\voltogl}[1]{\FPeval\amountg{round((#1 * 1.96):1)}\FPprint\amountg ~g/l (#1 vol)}
+\newcommand{\voltogl}[1]{\FPeval\amountg{round((#1 * 1.96):1)}\FPprint\amountg ~g/l}
 
 
 
@@ -170,6 +170,7 @@ biotransformation, DH = dry hopping} \par}}
 \newcommand{\hopgolding}{Golding}
 \newcommand{\hophallertaumittelfruh}{Hallertau Mittelfrüh}
 \newcommand{\hophallertautradition}{Hallertau Tradition}
+\newcommand{\hopherkules}{Herkules}
 \newcommand{\hophersbrucker}{Hersbrucker}
 \newcommand{\hophorizon}{Horizon}
 \newcommand{\hopidahoseven}{Idaho 7}
@@ -324,7 +325,7 @@ biotransformation, DH = dry hopping} \par}}
 \specitem{Bitterness} & \ifthenelse{\isempty{#6}}{--}{#6~IBU} \\ \midrule
 \specitem{Color} & \ifthenelse{\isempty{#7}}{--}{#7} \\ \midrule
 \specitem{Boil Time} & \ifthenelse{\isempty{#8}}{--}{#8} \\ \midrule
-\specitem{Carbonation} & \ifthenelse{\isempty{#9}}{--}{#9~vol} \\ \midrule
+\specitem{Carbonation} & \ifthenelse{\isempty{#9}}{--}{\voltogl{#9} / #9~vol} \\ \midrule
 \end{tabu}
 \end{recipeblock}
 }
