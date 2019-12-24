@@ -87,7 +87,7 @@ skipbelow=1.5mm]{recipeframe}
 \newcommand{\srmtoebc}[1]{\FPeval\amountg{round((#1 * 1.97):0)}\FPprint\amountg ~EBC}
 \newcommand{\sgtop}[1]{\FPeval\amountg{round((135.997 * pow(3,#1) - 630.272 * pow(2,#1) + 1111.14 * #1 - 616.868):1)}\FPprint\amountg ~°P}
 \newcommand{\voltogl}[1]{\FPeval\amountg{round((#1 * 1.96):1)}\FPprint\amountg ~g/l}
-
+\newcommand{\lboztokg}[2]{\FPeval\amountg{round((#1 * 0.4535924 + #2 * 28.34952 / 1000.0):2)}\FPprint\amountg ~kg}
 
 
 \newcommand{\specitem}[1]{\textcolor{black}{\uppercase{\textbf{#1}}}}
