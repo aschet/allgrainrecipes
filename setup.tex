@@ -85,6 +85,8 @@ skipbelow=1.5mm]{recipeframe}
 \newcommand{\cuptoml}[1]{\FPeval\amountg{round((#1 * 240.0):0)}\FPprint\amountg ~ml}
 \newcommand{\tsptoml}[1]{\FPeval\amountg{round((#1 * 4.92892):0)}\FPprint\amountg ~ml}
 \newcommand{\srmtoebc}[1]{\FPeval\amountg{round((#1 * 1.97):0)}\FPprint\amountg ~EBC}
+\newcommand{\ltoebc}[1]{\FPeval\amountg{round(((#1 * 2.65) - 1.2):0)}\FPprint\amountg ~EBC}
+\newcommand{\ebctoebc}[1]{\FPeval\amountg{round((#1):0)}\FPprint\amountg ~EBC}
 \newcommand{\sgtop}[1]{\FPeval\amountg{round((135.997 * pow(3,#1) - 630.272 * pow(2,#1) + 1111.14 * #1 - 616.868):1)}\FPprint\amountg ~°P}
 \newcommand{\voltogl}[1]{\FPeval\amountg{round((#1 * 1.96):1)}\FPprint\amountg ~g/l}
 \newcommand{\lboztokg}[2]{\FPeval\amountg{round((#1 * 0.4535924 + #2 * 28.34952 / 1000.0):2)}\FPprint\amountg ~kg}
@@ -144,6 +146,13 @@ biotransformation, DH = dry hopping} \par}}
 \begin{tabu} to \textwidth {lX}}{\end{tabu}
 \end{recipeblock}}
 \newcommand{\yeastinfo}[2]{#1 & #2 \\ \midrule}
+
+\newenvironment{maltinfos}[1] {\begin{recipeblock}{#1} 
+\begin{tabu} to \textwidth {Xrr}
+\textbf{Name} & \textbf{Color Min} & \textbf{Color Max} \\ \midrule
+}{\end{tabu}
+\end{recipeblock}}
+\newcommand{\maltinfo}[3]{#1 & #2 & #3 \\ \midrule}
 
 \newcommand{\dryhbt}[2]{DHBT\ifthenelse{\isempty{#1}}{}{\textsubscript{#1}}\ifthenelse{\isempty{#2}}{}{ (#2)}}
 \newcommand{\dryh}[2]{DH\ifthenelse{\isempty{#1}}{}{\textsubscript{#1}}\ifthenelse{\isempty{#2}}{}{ (#2)}}
