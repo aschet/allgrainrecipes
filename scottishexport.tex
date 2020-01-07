@@ -1,12 +1,49 @@
-\documentclass[parskip=half,fontsize=9pt,oneside]{scrbook}
+\stylesection{\stylescottishexport}
 
-\include{setup}
+% -----------------------------------------------------------------------------
+\begin{recipe}{80 Shilling Scottish Ale}
+% -----------------------------------------------------------------------------
 
-\begin{document}
+\begin{aboutblock}
+Recipe by Amahl Turczyn. \sourcezymurgy{July / August 2017}
+\end{aboutblock}
 
-\mainmatter
+\specifications{\stylescottishexport}{\galtol{5.5}}{1.055}{1.016}{5.1~\%}{30}{\srmtoebc{15}}{120~min}{}
 
-\stylesection{Workbench}
+\begin{methodandtiming}
+
+\begin{mashsteps}
+\mashstep{\ftoc{154}}{60~min}
+\mashstep{\ftoc{168}}{Mash out}
+\end{mashsteps}
+
+\begin{fermentationsteps}
+\fermentationstep{\ftoc{63}}{Pitch}
+\fermentationstep{\ftoc{67}}{Free raise to over 4~days; 2~weeks}
+\fermentationstep{\ftoc{36}}{Transfer to secondary; 2~weeks}
+\end{fermentationsteps}
+
+\end{methodandtiming}
+
+\recipebreak
+
+\begin{ingredientsblock}
+
+\begin{malts}
+\malt{Fawcett Golden Promise Pale Ale}{\lbtokg{11}}
+\malt{Roasted Barley}{\oztog{5}}
+\end{malts}
+
+\begin{hops}
+\hop{\hopeastkentgolding}{5~\%}{60~min}{\oztog{2}}
+\hop{Whirlfloc Tablet}{}{15~min}{1}
+\end{hops}
+
+\singleyeast{White Labs WLP028 / Wyeast 1728}
+
+\end{ingredientsblock}
+
+\end{recipe}
 
 % -----------------------------------------------------------------------------
 \begin{recipe}{"D3 Scottish Ale" Scottish Export}
@@ -56,7 +93,3 @@ in Baltimore, MD. \sourceaha
 \end{ingredientsblock}
 
 \end{recipe}
-
-\include{appendix}
-
-\end{document}
