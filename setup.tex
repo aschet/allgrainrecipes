@@ -71,7 +71,10 @@ skipbelow=1.5mm]{recipeframe}
 \end{minipage}
 }
 
+\newcommand{\gtog}[1]{#1 ~g}
+\newcommand{\ppmtopptm}[1]{#1 ~ppm}
 \newcommand{\ibutoibu}[1]{\FPeval\amountg{round((#1):0)}\FPprint\amountg ~IBU}
+\newcommand{\psitobar}[1]{\FPeval\amountg{round((#1 * 0.0689476):1)}\FPprint\amountg ~bar}
 \newcommand{\ftoc}[1]{\FPeval\amountg{round(((#1 - 32.0) / 1.8):0)}\FPprint\amountg ~°C}
 \newcommand{\gpgaltogpl}[1]{\FPeval\amountg{round((#1 * 0.264172):1)}\FPprint\amountg ~g/l}
 \newcommand{\ozpgaltogpl}[1]{\FPeval\amountg{round((#1 * 7.48915):1)}\FPprint\amountg ~g/l}
@@ -184,6 +187,7 @@ biotransformation, DH = dry hopping} \par}}
 \newcommand{\hopfalconersflight}{Falconer's Flight}
 \newcommand{\hopfuggle}{Fuggle}
 \newcommand{\hopgalaxy}{Galaxy}
+\newcommand{\hopgalena}{Galena}
 \newcommand{\hopglacier}{Glacier}
 \newcommand{\hopgolding}{Golding}
 \newcommand{\hophallertaumittelfruh}{Hallertau Mittelfrüh}
@@ -335,7 +339,7 @@ biotransformation, DH = dry hopping} \par}}
 
 \newcommand{\sourceaha}{Source: American Homebrewers Association.}
 \newcommand{\sourcezymurgy}[1]{Source: Zymurgy #1.}
-\newcommand{\waterprofile}[6]{\ce{Ca} #1~ppm, \ce{Mg} #2~ppm, \ce{SO4} #3~ppm, \ce{Na} #4~ppm, \ce{Cl} #5~ppm\ifthenelse{\isempty{#6}}{}{, \ce{HCO3} #6~ppm}}
+\newcommand{\waterprofile}[6]{\ce{Ca} #1~ppm, \ce{Mg} #2~ppm, \ce{Na} #3~ppm, \ce{SO4} #4~ppm, \ce{Cl} #5~ppm\ifthenelse{\isempty{#6}}{}{, \ce{HCO3} #6~ppm}}
 
 \newcommand{\specifications}[9]{
 \begin{recipeblock}{Specifications}
