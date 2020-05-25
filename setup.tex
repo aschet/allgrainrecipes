@@ -101,7 +101,7 @@ skipbelow=1.5mm]{recipeframe}
 \newcommand{\sgtop}[1]{\FPeval\amountg{round((135.997 * pow(3,#1) - 630.272 * pow(2,#1) + 1111.14 * #1 - 616.868):1)}\FPprint\amountg ~°P}
 \newcommand{\voltogl}[1]{\FPeval\amountg{round((#1 * 1.96):1)}\FPprint\amountg ~g/l}
 \newcommand{\lboztokg}[2]{\FPeval\amountg{round((#1 * 0.4535924 + #2 * 28.34952 / 1000.0):2)}\FPprint\amountg ~kg}
-
+\newcommand{\cacotohco}[1]{\FPeval\amountg{round((61.0 * #1 / 50.0):0)}\FPprint\amountg}
 
 \newcommand{\specitem}[1]{\textcolor{black}{\uppercase{\textbf{#1}}}}
 
@@ -176,6 +176,7 @@ biotransformation, DH = dry hopping} \par}}
 \newcommand{\hopapollo}{Apollo}
 \newcommand{\hoparamis}{Aramis}
 \newcommand{\hopaurora}{Aurora}
+\newcommand{\hopazacca}{Azacca}
 \newcommand{\hopbramlingcross}{Bramling Cross}
 \newcommand{\hopbravo}{Bravo}
 \newcommand{\hopcalypso}{Calypso}
@@ -215,6 +216,7 @@ biotransformation, DH = dry hopping} \par}}
 \newcommand{\hopmagnum}{Magnum}
 \newcommand{\hopmandarinabavaria}{Mandarina Bavaria}
 \newcommand{\hopmarynka}{Marynka}
+\newcommand{\hopmatueka}{Matueka}
 \newcommand{\hopmillennium}{Millennium}
 \newcommand{\hopmosaic}{Mosaic}
 \newcommand{\hopmotueka}{Motueka}
@@ -351,6 +353,7 @@ biotransformation, DH = dry hopping} \par}}
 % Belgian Strong Ale
 \newcommand{\stylebelgianblondale}{Belgian Blond Ale}
 \newcommand{\stylebelgiandubbel}{Belgian Dubbel}
+\newcommand{\stylebelgiantripel}{Belgian Tripel}
 \newcommand{\stylebelgiangoldenstrongale}{Belgian Golden Strong Ale}
 \newcommand{\stylebelgiandarkstrongale}{Belgian Dark Strong Ale}
 
