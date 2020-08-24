@@ -6,33 +6,33 @@
 
 \mainmatter
 
-\stylesection{Workbench}
+%\stylesection{Workbench}
  
 % -----------------------------------------------------------------------------
-\begin{recipe}{More Fun Blonde}
+\begin{recipe}{Brew Age: Vienna Lager}
 % -----------------------------------------------------------------------------
 
 \begin{aboutblock}
-Recipe by Jay Shambo. Gold medal at 2011 GABF Pro-Am.
-\sourcezymurgy{January / February 2013}
+Recipe by Johannes Kugler of Brew Age. A non traditional, late-hopped
+Vienna Lager optimized for drinkability. Source: Krennmair, Andreas. Vienna Lager. Berlin, 2020.
 \end{aboutblock}
 
-\specifications{\stylebelgianblondale}{\galtol{5}}{1.067}{1.007}{7.8~\%}{34}{\srmtoebc{4}}{60~min}{}
+\specifications{\styleviennalager}{\ltol{20}}{1.048}{1.012}{5~\%}{25}{\srmtoebc{5.4}}{70~min}{}
 
 \begin{methodandtiming}
 
 \begin{mashsteps}
-\mashstep{\ftoc{152}}{60~min}
+\mashstep{\ctoc{50}}{5~min}
+\mashstep{\ctoc{63}}{30~min}
+\mashstep{\ctoc{73}}{30~min}
+\mashstep{\ctoc{78}}{Mash out}
 \end{mashsteps}
 
 \begin{fermentationsteps}
-\fermentationstep{\ftoc{65}}{Pitch}
-\fermentationstep{\ftoc{75}}{Raise over 1.5 days; full attenuation}
+\fermentationstep{\ctoc{7}}{Pitch}
+\fermentationstep{\ctoc{9}}{Attenuation to 60~\%}
+\fermentationstep{\ctoc{11}}{Full attenuation}
 \end{fermentationsteps}
-
-\begin{directions}
-Water adjustment: mash pH of 5.4.
-\end{directions}
 
 \end{methodandtiming}
 
@@ -41,24 +41,23 @@ Water adjustment: mash pH of 5.4.
 \begin{ingredientsblock}
 
 \begin{malts}
-\malt{\maltpilsner}{\lbtokg{8.5}}
-\malt{\maltpale}{\lbtokg{2}}
+\malt{\maltvienna}{\kgtokg{3.6}}
+\malt{\maltpilsner}{\kgtokg{0.65}}
+\malt{\maltweyermanncarared}{\kgtokg{0.23}}
 \end{malts}
 
 \begin{hops}
-\hop{Dextrose}{}{}{\oztog{13}}
-\hop{\hopnorthernbrewer}{9~\%}{60~min}{\oztog{0.5}}
-\hop{\hopnorthernbrewer}{9~\%}{20~min}{\oztog{0.6}}
-\hop{\hopwillamette}{5~\%}{20~min}{\oztog{0.7}}
-\hop{\hopwillamette}{5~\%}{\foh{}}{\oztog{0.5}}
+\hop{\hophallertaumittelfruh}{4~\%}{\fwh}{\gtog{9}}
+\hop{\hopmagnum}{13~\%}{50~min}{\gtog{8}}
+\hop{\hophallertaumittelfruh}{4~\%}{\whirl{}{30~min}}{\gtog{44}}
 \end{hops}
 
-\singleyeast{Wyeast 3787 / White Labs WLP530}
+\singleyeast{Fermentis SafLager W-34/70}
 
 \end{ingredientsblock}
 
 \end{recipe}
 
-\include{appendix}
+%\include{appendix}
 
 \end{document}
